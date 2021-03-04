@@ -1,0 +1,10 @@
+<h1>Add a new yummy cocktail</h1>
+
+
+<%= form_for(@cocktail) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name%>
+  <%= f.submit %>
+<% end %>
+
+<!-- how to access ingredients / create doses -->
