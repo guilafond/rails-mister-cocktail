@@ -1,21 +1,19 @@
 <div class="container">
 
   <h1>All cocktails</h1>
+
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail.id) do %>
-      <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-product-infos">
-          <h2><%= cocktail.name %></h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
-        </div>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= Cocktail::RAND_IMG.sample %>)">
+        <%= cocktail.name %>
       </div>
-
       <% end %>
-
     <% end %>
   </div>
+
+
+
   <button>
     <%= link_to "add cocktail", new_cocktail_path  %>
   </button>
